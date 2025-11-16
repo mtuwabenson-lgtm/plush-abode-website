@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plush Abode - Luxurious Home Textiles for All Ages</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for custom colors and font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'plush-primary': '#14532D', // Deep Teal
+                        'plush-secondary': '#F5F5DC', // Soft Beige
+                        'plush-accent': '#FBBF24', // Warm Amber
+                        'plush-text': '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for aesthetics */
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #14532D;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body class="font-sans text-plush-text bg-plush-secondary">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-3xl font-extrabold text-plush-primary tracking-tight">
+                Plush Abode
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#shop" class="hover:text-plush-primary transition duration-300">Shop</a>
+                <a href="#categories" class="hover:text-plush-primary transition duration-300">Categories</a>
+                <a href="#about" class="hover:text-plush-primary transition duration-300">About</a>
+                <a href="#contact" class="hover:text-plush-primary transition duration-300">Contact</a>
+            </nav>
+
+            <!-- Cart Icon & Mobile Menu Button -->
+            <div class="flex items-center space-x-4">
+                <button class="text-plush-primary hover:text-plush-accent transition duration-300 relative">
+                    <!-- Shopping Cart Icon (Lucide Icon Placeholder) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.72a2 2 0 0 0 2-1.58L23 6H6"/></svg>
+                    <span class="absolute -top-2 -right-2 bg-plush-accent text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">3</span>
+                </button>
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-plush-primary hover:bg-plush-secondary transition duration-300">
+                    <!-- Hamburger Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <nav class="flex flex-col p-4 space-y-2">
+                <a href="#shop" class="block py-2 text-plush-text hover:bg-gray-100 rounded-md transition duration-300">Shop</a>
+                <a href="#categories" class="block py-2 text-plush-text hover:bg-gray-100 rounded-md transition duration-300">Categories</a>
+                <a href="#about" class="block py-2 text-plush-text hover:bg-gray-100 rounded-md transition duration-300">About</a>
+                <a href="#contact" class="block py-2 text-plush-text hover:bg-gray-100 rounded-md transition duration-300">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-plush-primary text-white py-20 md:py-32 rounded-b-xl shadow-inner mb-12">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl sm:text-6xl font-black mb-4 leading-tight">
+                Luxury Comfort, Every Room, Every Age
+            </h1>
+            <p class="text-xl sm:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
+                Discover the finest duvets, towels, and carpets designed to turn your house into a **Plush Abode**.
+            </p>
+            <a href="#shop" class="inline-block bg-plush-accent text-plush-primary font-bold text-lg py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                Shop Our Collections
+            </a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-plush-primary">Explore Our Sanctuary</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- Category Card 1: Bedding -->
+            <div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-plush-primary/30 transition duration-500 transform hover:-translate-y-1 group">
+                <img src="https://placehold.co/600x400/14532D/F5F5DC?text=Soft+Bedding" alt="Duvets and Pillows" class="w-full h-56 object-cover group-hover:scale-[1.03] transition duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400?text=Bedding';" />
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2 text-plush-primary">Bedding Essentials</h3>
+                    <p class="text-gray-600 mb-4">Duvets, sheets, and pillows for the perfect night's sleep. From baby cribs to king-size.</p>
+                    <a href="#" class="text-plush-accent font-semibold hover:underline flex items-center">
+                        View Duvets & Sets
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Category Card 2: Bath -->
+            <div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-plush-primary/30 transition duration-500 transform hover:-translate-y-1 group">
+                <img src="https://placehold.co/600x400/FBBF24/14532D?text=Luxury+Towels" alt="Towels and Bath Mats" class="w-full h-56 object-cover group-hover:scale-[1.03] transition duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400?text=Towels';" />
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2 text-plush-primary">Bath Comfort</h3>
+                    <p class="text-gray-600 mb-4">Luxuriously soft, highly absorbent towels and bathrobes for a spa-like experience.</p>
+                    <a href="#" class="text-plush-accent font-semibold hover:underline flex items-center">
+                        View Towels & Mats
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Category Card 3: Flooring -->
+            <div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-plush-primary/30 transition duration-500 transform hover:-translate-y-1 group">
+                <img src="https://placehold.co/600x400/F5F5DC/14532D?text=Modern+Carpets" alt="Area Rugs and Carpets" class="w-full h-56 object-cover group-hover:scale-[1.03] transition duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400?text=Carpets';" />
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2 text-plush-primary">Flooring & Rugs</h3>
+                    <p class="text-gray-600 mb-4">Stylish and durable carpets, runners, and area rugs that define any living space.</p>
+                    <a href="#" class="text-plush-accent font-semibold hover:underline flex items-center">
+                        View Rugs & Mats
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="shop" class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-plush-primary">Featured Abode Favorites</h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+            <!-- Product Card 1: Cashmere Duvet -->
+            <div class="bg-white rounded-lg shadow-xl p-4 text-center hover:shadow-2xl transition duration-300">
+                <img src="https://placehold.co/300x300/14532D/F5F5DC?text=Cashmere+Duvet" alt="Cashmere Duvet" class="w-full h-32 object-cover mb-4 rounded-md" onerror="this.onerror=null; this.src='https://placehold.co/300x300?text=Duvet';" />
+                <h3 class="font-bold text-lg text-plush-text truncate">Cloud Comfort Duvet</h3>
+                <p class="text-sm text-gray-500">Premium Bedding</p>
+                <p class="text-2xl font-extrabold text-plush-primary my-2">$149.99</p>
+                <button class="w-full bg-plush-accent text-plush-primary py-2 rounded-full font-semibold hover:bg-opacity-90 transition duration-300 text-sm">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 2: Bamboo Towel Set -->
+            <div class="bg-white rounded-lg shadow-xl p-4 text-center hover:shadow-2xl transition duration-300">
+                <img src="https://placehold.co/300x300/FBBF24/14532D?text=Bamboo+Towels" alt="Bamboo Towel Set" class="w-full h-32 object-cover mb-4 rounded-md" onerror="this.onerror=null; this.src='https://placehold.co/300x300?text=Towels';" />
+                <h3 class="font-bold text-lg text-plush-text truncate">Soft-Touch Towel Set</h3>
+                <p class="text-sm text-gray-500">Bamboo Bath</p>
+                <p class="text-2xl font-extrabold text-plush-primary my-2">$34.50</p>
+                <button class="w-full bg-plush-accent text-plush-primary py-2 rounded-full font-semibold hover:bg-opacity-90 transition duration-300 text-sm">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 3: Geometric Rug -->
+            <div class="bg-white rounded-lg shadow-xl p-4 text-center hover:shadow-2xl transition duration-300">
+                <img src="https://placehold.co/300x300/F5F5DC/14532D?text=Area+Rug" alt="Geometric Area Rug" class="w-full h-32 object-cover mb-4 rounded-md" onerror="this.onerror=null; this.src='https://placehold.co/300x300?text=Rug';" />
+                <h3 class="font-bold text-lg text-plush-text truncate">Modern Geometry Rug</h3>
+                <p class="text-sm text-gray-500">Living Room Flooring</p>
+                <p class="text-2xl font-extrabold text-plush-primary my-2">$89.00</p>
+                <button class="w-full bg-plush-accent text-plush-primary py-2 rounded-full font-semibold hover:bg-opacity-90 transition duration-300 text-sm">Add to Cart</button>
+            </div>
+            
+            <!-- Product Card 4: Kids Blanket -->
+            <div class="bg-white rounded-lg shadow-xl p-4 text-center hover:shadow-2xl transition duration-300">
+                <img src="https://placehold.co/300x300/14532D/FBBF24?text=Kids+Blanket" alt="Kids Weighted Blanket" class="w-full h-32 object-cover mb-4 rounded-md" onerror="this.onerror=null; this.src='https://placehold.co/300x300?text=Blanket';" />
+                <h3 class="font-bold text-lg text-plush-text truncate">Calm Kids Weighted Blanket</h3>
+                <p class="text-sm text-gray-500">Made for all ages</p>
+                <p class="text-2xl font-extrabold text-plush-primary my-2">$59.99</p>
+                <button class="w-full bg-plush-accent text-plush-primary py-2 rounded-full font-semibold hover:bg-opacity-90 transition duration-300 text-sm">Add to Cart</button>
+            </div>
+
+        </div>
+        <div class="text-center mt-10">
+            <a href="#" class="inline-block border-2 border-plush-primary text-plush-primary font-bold py-3 px-8 rounded-full hover:bg-plush-primary hover:text-white transition duration-300">
+                View All Products
+            </a>
+        </div>
+    </section>
+
+    <!-- About Us / Mission Section -->
+    <section id="about" class="bg-plush-primary/10 py-16 mb-12 rounded-xl">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-3xl font-bold mb-4 text-plush-primary">Designed for Everyone, Built to Last</h2>
+            <p class="text-xl text-plush-text leading-relaxed">
+                At **Plush Abode**, we believe that true comfort knows no age. We hand-select materials that are durable enough for busy family life, yet soft and gentle enough for the most sensitive skin. From newborn blankets to senior comfort mats, our collections are meticulously crafted to provide a safe, luxurious, and welcoming environment for every member of your household.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-plush-primary text-white py-12 rounded-t-xl">
+        <div class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
+
+            <!-- Footer Col 1: Logo & Mission -->
+            <div>
+                <h4 class="text-2xl font-extrabold mb-3">Plush Abode</h4>
+                <p class="text-sm opacity-80">Bringing warmth and luxury to your home, one textile at a time.</p>
+            </div>
+
+            <!-- Footer Col 2: Quick Links -->
+            <div>
+                <h4 class="font-bold text-lg mb-4 text-plush-accent">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#shop" class="hover:underline">Shop Now</a></li>
+                    <li><a href="#about" class="hover:underline">Our Story</a></li>
+                    <li><a href="#" class="hover:underline">FAQ</a></li>
+                    <li><a href="#" class="hover:underline">Shipping & Returns</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Col 3: Contact -->
+            <div>
+                <h4 class="font-bold text-lg mb-4 text-plush-accent">Get in Touch</h4>
+                <ul class="space-y-2 text-sm">
+                    <li>Email: <a href="mailto:support@plushabode.com" class="hover:underline">support@plushabode.com</a></li>
+                    <li>Phone: (555) 123-4567</li>
+                    <li>Address: 101 Comfort Lane, Textile City</li>
+                </ul>
+            </div>
+
+            <!-- Footer Col 4: Newsletter -->
+            <div>
+                <h4 class="font-bold text-lg mb-4 text-plush-accent">Stay Connected</h4>
+                <p class="text-sm mb-4">Subscribe for 10% off your first order.</p>
+                <div class="flex">
+                    <input type="email" placeholder="Your email" class="p-2 rounded-l-lg text-sm text-plush-text focus:ring-plush-accent focus:ring-2 border-none w-full" />
+                    <button class="bg-plush-accent text-plush-primary p-2 rounded-r-lg font-semibold hover:bg-opacity-90 transition duration-300">Sign Up</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-plush-secondary/20 mt-8 pt-6 text-center text-sm opacity-60">
+            &copy; <span id="current-year"></span> Plush Abode. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // --- JavaScript for Mobile Menu Toggle and Year Update ---
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const currentYear = document.getElementById('current-year');
+
+            // Set current year in footer
+            currentYear.textContent = new Date().getFullYear();
+
+            // Toggle Mobile Menu Visibility
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Optional: Hide menu when a link is clicked on mobile
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
